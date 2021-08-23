@@ -12,21 +12,24 @@
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.5/dist/sweetalert2.all.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="./css/other.css?66886666">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/a251231/mass@main/panel/css/other.css?66886666">
     <link rel="icon" type="image/x-icon" href="https://github.com/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/a251231/mass@main/panel/css/sweetalert.css">
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/a251231/mass@main/panel/js/sweetalert-dev.js"></script>
 </head>
 
 <body class="landing">
+     <script type="text/javascript" color="255,255,255" opacity='0.7' zIndex="auto" count="200" src="https://cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script> 
     <div id="page-wrapper">
         <section id="banner">
             <div class="inner">
                 <h2>JSTOOL</h2>
                 <p>点击下方按钮开始使用</p>
                 <ul class="actions">
-                    <li><a id="JumpToApp" class="button special" title="APP登录">跳转京东APP添加</a>
-                    <li><a id="GetQrCode" class="button special" title="手机扫描二维码登录">扫描二维码添加</a>
-                    <li><a id="login" class="button special" title="APP登录" href="./login.html">控制中心</a>
-                    <li><a id="BeanChange" class="button special" title="走势图" href="./BeanChange.html">走势图</a>
+                    <li><a id="JumpToApp" class="button" title="APP登录">跳转京东APP添加</a>
+                    <li><a id="GetQrCode" class="button" title="手机扫描二维码登录">扫描二维码添加</a>
+                    <li><a id="warn" class="button" title="APP登录" href="./login.html">控制中心</a>
+                    <!--<li><a id="BeanChange" class="button special" title="走势图" href="./BeanChange.html">走势图</a>-->
                     </li>
                 </ul>
                 <p>
@@ -71,7 +74,9 @@
 
 <script>
 var qrcode, userCookie, timeId;
-
+  function warn() {
+swal("请务必看一遍", "✌️京东APP扫码后 页面跳转即为成功✌️\n❤️打开APP完成新手任务❤️\n❣️京东❣️➨我的➨更多工具➨(农场、萌宠、工厂、宠汪汪、金榜创造营、领现金、健康社区、种豆得豆)\n❣️京喜❣️➨我的➨(农场、牧场、工厂、财富岛)\n❣️金融❣️➨我的➨(种摇钱树、天天提鹅、养猪猪)\n☂️京东账号绑定微信可以更多¥¥☂️\n☠️请关闭免密支付☠️","success")
+  }
 $(document).ready(function () {
   qrcode = new QRCode(document.getElementById('qrcode'), {
     text: 'sample',
